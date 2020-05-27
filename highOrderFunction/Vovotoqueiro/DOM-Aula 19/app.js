@@ -1,24 +1,55 @@
-// Seletores de Elemento Único
+// document.getElementsByClassName()
 
-// document.getElementById()
+// const itens = document.getElementsByClassName("item-lista");
+// console.log(itens);
+// console.log(itens[2]);
+// itens[0].style.color = "red";
+// itens[2].textContent = "Ir ao banco";
 
-console.log(document.getElementById("titulo-tarefas"));
+// const listaItens = document
+//   .querySelector("ul")
+//   .getElementsByClassName("item-lista");
+// console.log(listaItens);
 
-// Acessar partes do elemento
+// document.getElementsByTagName()
 
-console.log(document.getElementById("titulo-tarefas").id);
-console.log(document.getElementById("titulo-tarefas").className);
+let liTags = document.getElementsByTagName("li");
+// console.log(liTags);
+// console.log(liTags[2]);
+// liTags[0].style.color = "red";
+// liTags[2].textContent = "Ir ao banco";
 
-// Mudar o Estilo
+// Conversão de HTML Collection em Array
 
-document.getElementById("titulo-tarefas").style.background = "black";
-document.getElementById("titulo-tarefas").style.color = "white";
-document.getElementById("titulo-tarefas").style.padding = "10px";
-// document.getElementById("titulo-tarefas").style.display = "none";
+// liTags = Array.from(liTags);
+// liTags.reverse();
+// console.log(liTags);
 
-// Mudar o Conteúdo
+// liTags.forEach(function(liTags, index) {
+//   console.log(liTags.className);
+//   liTags.textContent = `Item: ${index}`;
+// });
 
-document.getElementById("titulo-tarefas").textContent = "Relação de Tarefas";
-document.getElementById("titulo-tarefas").innerText = "Minhas Tarefas";
-document.getElementById("titulo-tarefas").innerHTML =
-  '<span style="color: red">Tarefas</span>';
+// document.querySelectorAll
+
+// const itens = document.querySelectorAll("ul.lista li.item-lista");
+// console.log(itens);
+
+// Não precisa converter, pois é uma NODE LIST
+// itens.forEach(function(item, index) {
+//   item.textContent = `Novo Item: ${index}`;
+// });
+
+// Formatando linhas de uma lista, tabela, etc...
+
+const liImpar = document.querySelectorAll("li:nth-child(odd)");
+const liPar = document.querySelectorAll("li:nth-child(even)");
+
+liImpar.forEach(function(li, index) {
+  li.style.background = "#556";
+});
+
+liPar.forEach(function(li, index) {
+  li.style.background = "#fff";
+  li.style.color = "#000";
+});

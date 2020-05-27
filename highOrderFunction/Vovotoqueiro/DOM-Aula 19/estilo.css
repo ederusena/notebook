@@ -1,6 +1,6 @@
 body {
   /* background-color: #6e4bb8; */
-  background-image: url("../images/moto.jpg");
+  background-image: url("./images/moto.jpg");
   min-height: 100vh;
   background-position: center;
   background-size: cover;
