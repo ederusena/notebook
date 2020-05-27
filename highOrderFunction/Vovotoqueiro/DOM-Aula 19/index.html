@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Lista de Tarefas</title>
+  </head>
+
+  <body>
+    <div class="overlay">
+      <div class="container">
+        <h1 class="text-center display-4">
+          Lista de Tarefas
+        </h1>
+        <p class="lead text-center">
+          Vamos implementar esta Lista de Tarefas usando JS puro
+        </p>
+        <div class="row">
+          <form class="col-8 mx-auto">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="tarefaInput"
+                placeholder="Nova tarefa"
+              />
+              <span
+                ><button
+                  type="submit"
+                  class="text-uppercase btn btn-success btn-sm"
+                >
+                  Adicionar
+                </button></span
+              >
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <h4 id="titulo-tarefas" class="col-8 mx-auto">Tarefas</h4>
+          <ul class="col-8 mx-auto">
+            <li>
+              Passar no supermercado
+              <a href="#">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li
+              style="text-decoration: line-through; text-decoration-style: double;"
+            >
+              Comprar remédios na farmácia
+              <a href="#">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              Pagar boleto
+              <a href="#">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <a class="col-8 mx-auto limpar" href="#">
+            <button
+              type="button"
+              class="text-uppercase btn btn-danger btn-sm btn-block"
+            >
+              Limpar Lista <i class="iBtn fa fa-trash-o"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
