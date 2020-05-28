@@ -34,7 +34,11 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 */
 // ?
 const showTeamPosition = (position) => {
-    console.log(`O time que está em ${position}º lugar é o ${teams[position-1]}`);
+    if (position < 1 || position > 5){
+        console.log("Não temos a informação do time que está nessa posição.")
+    }else{
+        console.log(`O time que está em ${position}º lugar é o ${teams[position-1]}`);
+    }
 }
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
@@ -45,6 +49,8 @@ showTeamPosition(1)
 showTeamPosition(2)
 showTeamPosition(3)
 showTeamPosition(4)
+showTeamPosition(0)
+showTeamPosition(6)
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
