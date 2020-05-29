@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Lecture 10.3</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <script>
+        const appendRepository = (data) => {
+            data.forEach(data => {
+              let ul = document.querySelector("ul")
+              let li = document.createElement("li")
+              li.innerHTML = data.name
+              ul.appendChild(li)
+            });
+        }
+
+        const getGithubRepos = async (term) => {
+            await new Promise((resolve, reject) => {
+                $.getJSON(
+                    `https://api.github.com/users/ederusena/repos`, // Chama API -> assicrona
+                    (data) => {
+                        appendRepository(data)
+                    },
+                    (error) => {
+                        reject(error)
+                    }
+                )
+            })
+        }
+        getGithubRepos()
+
+    </script>
+</head>
+
+<body>
+    <ul>
+    </ul>
+</body>
+
+</html>
